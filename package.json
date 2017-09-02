@@ -26,6 +26,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "metro-dist": "^3.0.17",
+    "ng-socket-io": "^0.1.11",
     "ng2-cookies": "^1.0.12",
     "pty.js": "^0.3.1",
     "rxjs": "^5.4.2",
