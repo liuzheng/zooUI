@@ -40,6 +40,7 @@ server.run = function (options) {
     var server = http.createServer(app);
 
     app.use("/", express.static(__dirname + '/dist/')); // 创建服务端
+    app.use("/welcome", express.static(__dirname + '/dist/')); // 创建服务端
     app.use("/socket.io/", express.static(__dirname + '/api/')); // 创建服务端
     // let term.js handle req/res
     // app.use(terminal.middleware());
