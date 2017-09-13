@@ -66,6 +66,7 @@ export let DataStore: {
   leftbarhide: boolean;
   termlist: Array<string>;
   windowsize: Array<number>;
+  PageNotFoundComponent: boolean;
 } = {
   socket: io.connect(),
   user: new User,
@@ -85,6 +86,7 @@ export let DataStore: {
   leftbarhide: false,
   termlist: [],
   windowsize: [],
+  PageNotFoundComponent: false,
 };
 
 

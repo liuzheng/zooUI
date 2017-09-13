@@ -33,9 +33,9 @@ export class NavComponent {
     // this._appService.getnav()
   }
 
-  // ngOnInit() {
-  //
-  // }
+   ngOnInit() {
+
+  }
   //
   // click(event) {
   //   this._logger.debug('nav.ts:NavComponent,click', event);

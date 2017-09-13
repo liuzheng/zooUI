@@ -1,28 +1,157 @@
-<div class="app-bar">
-    <a class="app-bar-element" href="...">Home</a>
+<div class="fluent-menu" data-role="fluentmenu" data-on-special-click="specialClick" *ngIf="!DataStore.PageNotFoundComponent">
+  <ul class="tabs-holder">
+    <li class="special"><a href="#" onclick="showMetroCharm('#leftbar', 'left')">File</a></li>
+    <li class="active"><a href="#tab_home">Home</a></li>
+    <li class=""><a href="#tab_mailings">Mailing</a></li>
+    <li class=""><a href="#tab_folder">Folder</a></li>
+    <li class=""><a href="#tab_view">View</a></li>
+  </ul>
 
-    <span class="app-bar-divider"></span>
-
-    <ul class="app-bar-menu">
-        <li><a href="">Home</a></li>
-        <li>
-            <a href="" class="dropdown-toggle">Products</a>
+  <div class="tabs-content">
+    <div class="tab-panel" id="tab_home" style="display: block;">
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <button class="fluent-big-button">
+            <span class="icon mif-envelop"></span>
+            Create<br>message
+          </button>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button dropdown-toggle">
+              <span class="icon mif-file-picture"></span>
+              <span class="label">Create<br>element</span>
+            </button>
             <ul class="d-menu" data-role="dropdown">
-                <li><a href="">Windows 10</a></li>
-                <li><a href="">Spartan</a></li>
-                <li><a href="">Outlook</a></li>
-                <li><a href="">Office 2015</a></li>
-                <li class="divider"></li>
-                <li><a href="" class="dropdown-toggle">Other Products</a>
-                    <ul class="d-menu" data-role="dropdown">
-                        <li><a href="">Internet Explorer 10</a></li>
-                        <li><a href="">Skype</a></li>
-                        <li><a href="">Surface</a></li>
-                    </ul>
-                </li>
+              <li><a href="#">Message</a></li>
+              <li><a href="#">Event</a></li>
+              <li><a href="#">Meeting</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
-        </li>
-        <li><a href="">Support</a></li>
-        <li><a href="">Help</a></li>
-    </ul>
+          </div>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button">
+              <span class="mif-cancel"></span>
+              <span class="label">Delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="tab-group-caption">Clipboard</div>
+      </div>
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <div class="tab-content-segment">
+            <button class="fluent-button"><span class="mif-loop"></span>Replay</button>
+            <button class="fluent-button"><span class="mif-infinite"></span>Replay all</button>
+            <button class="fluent-button"><span class="mif-loop2"></span>Forward</button>
+          </div>
+          <div class="tab-content-segment">
+            <button class="fluent-tool-button"><img src="images/Notebook-Save.png"></button>
+            <button class="fluent-tool-button"><img src="images/Folder-Rename.png"></button>
+            <button class="fluent-tool-button"><img src="images/Calendar-Next.png"></button>
+          </div>
+        </div>
+        <div class="tab-group-caption">Reply</div>
+      </div>
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <div class="input-control text">
+            <input type="text">
+            <button class="button"><span class="mif-search"></span></button>
+          </div>
+          <button class="fluent-button"><span class="icon-book on-left"></span>Address Book</button>
+          <div class="tab-content-segment">
+            <button class="fluent-button dropdown-toggle">
+              <span class="mif-filter on-left"></span>
+              <span class="label">Mail Filters</span>
+            </button>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="#">Unread messages</a></li>
+              <li><a href="#">Has attachments</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Important</a></li>
+              <li><a href="#">Broken</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-group-caption">Search</div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab_mailings" style="display: none;">
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <button class="fluent-big-button">
+            <span class="icon mif-envelop"></span>
+            Create<br>message
+          </button>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button dropdown-toggle">
+              <span class="icon mif-file-picture"></span>
+              <span class="label">Create<br>element</span>
+            </button>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="#">Message</a></li>
+              <li><a href="#">Event</a></li>
+              <li><a href="#">Meeting</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button">
+              <span class="mif-cancel"></span>
+              <span class="label">Delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="tab-group-caption">Clipboard</div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab_folder" style="display: none;">
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <div class="tab-content-segment">
+            <button class="fluent-button"><span class="mif-loop"></span>Replay</button>
+            <button class="fluent-button"><span class="mif-infinite"></span>Replay all</button>
+            <button class="fluent-button"><span class="mif-loop2"></span>Forward</button>
+          </div>
+          <div class="tab-content-segment">
+            <button class="fluent-tool-button"><img src="images/Notebook-Save.png"></button>
+            <button class="fluent-tool-button"><img src="images/Folder-Rename.png"></button>
+            <button class="fluent-tool-button"><img src="images/Calendar-Next.png"></button>
+          </div>
+        </div>
+        <div class="tab-group-caption">Reply</div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab_view" style="display: none;">
+      <div class="tab-panel-group">
+        <div class="tab-group-content">
+          <button class="fluent-big-button">
+            <span class="icon mif-envelop"></span>
+            Create<br>message
+          </button>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button dropdown-toggle">
+              <span class="icon mif-file-picture"></span>
+              <span class="label">Create<br>element</span>
+            </button>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="#">Message</a></li>
+              <li><a href="#">Event</a></li>
+              <li><a href="#">Meeting</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="tab-content-segment">
+            <button class="fluent-big-button">
+              <span class="mif-cancel"></span>
+              <span class="label">Delete</span>
+            </button>
+          </div>
+        </div>
+        <div class="tab-group-caption">Clipboard</div>
+      </div>
+    </div>
+  </div>
 </div>

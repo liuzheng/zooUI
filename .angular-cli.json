@@ -20,7 +20,9 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/metro-dist/css/metro.min.css"
+        "../node_modules/metro-dist/css/metro.min.css",
+        "../node_modules/metro-dist/css/metro-icons.min.css",
+        "../node_modules/metro-dist/css/metro-schemes.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
