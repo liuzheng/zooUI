@@ -8,9 +8,7 @@ import {AppService, HttpService} from './app.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   providers: [AppService, HttpService],
-  // directives: [LeftbarComponent, TermComponent]
 })
 
 export class AppComponent {
-  // DataStore = DataStore;
 }

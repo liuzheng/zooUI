@@ -12,16 +12,8 @@ declare let jQuery: any;
 // declare var Terminal: any;
 // declare var Clipboard: any;
 import * as io from 'socket.io-client';
-// declare let io: any;
 // declare var layer: any;
-// @Injectable()
-// export class Logger {
-//   logs: string[] = []; // capture logs for testing
-//   log(message: string) {
-//     this.logs.push(message);
-//     console.log(message);
-//   }
-// }
+
 
 export class Group {
   id: number;
@@ -110,13 +102,13 @@ export class HttpService {
   constructor(private _http: Http) {
   }
 
-  // request(url: string | Request, options?: RequestOptionsArgs) {
-  //   if (options == null) {
-  //     options = {};
-  //   }
-  //   options.headers = this.headers;
-  //   return this._http.request(url, options)
-  // }
+  request(url: string | Request, options?: RequestOptionsArgs) {
+    if (options == null) {
+      options = {};
+    }
+    options.headers = this.headers;
+    return this._http.request(url, options)
+  }
 
   get(url: string, options?: RequestOptionsArgs) {
     if (options == null) {
@@ -173,7 +165,6 @@ export class HttpService {
     options.headers = this.headers;
     return this._http.options(url, options)
   }
-
 }
 
 @Injectable()
@@ -213,7 +204,6 @@ export class AppService {
 
       // DataStore.socket.emit('api', 'all');
     });
-    // this.checklogin();
     this.browser()
   }
 
